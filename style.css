@@ -1,0 +1,99 @@
+*{
+  box-sizing: border-box;
+  transition-duration: 3s;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.parent{
+  width:100vw;
+  height: 100vh;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.child1, .child2{
+  width: 100%;
+  height: 100%;
+  background-color: lightyellow;
+  border-style: solid;
+  padding: 10px;
+  overflow: scroll;
+}
+.fa-power-off{
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  color: red;
+}
+.sound_ear{
+  background-color: none;
+  margin: 15px auto;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 10px;
+  justify-content: center;
+}
+.sound_ear > *{
+  width: auto !important;
+  background-color: none;
+}
+.sound_ear > input[type="range"]{
+  flex: 1 1 auto;
+}
+.fa-headphones, .fa-volume-high{
+  font-size: 15px;
+  width: 100%;
+  /*font-weight: 10 !important;*/
+}
+.sound{
+  width: 80vw;
+  height: 50px;
+  background-color: orangered;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.sound > *{
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.sound > *:active{
+  transform: scale(1.1);
+}
+#minus_ten{
+  border-radius: 5px 0 0 5px;
+}
+#plus_ten{
+  border-radius: 0 5px 5px 0;
+}
+input[type="number"]{
+  flex: 1 1 auto;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 600px) and (orientation:landscape) {
+  .parent{
+    flex-direction: row;
+  }
+  .sound_ear, .sound{
+    width: 40vw;
+  }
+}
